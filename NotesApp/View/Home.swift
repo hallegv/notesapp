@@ -25,8 +25,8 @@ struct Home: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            Sidebar()
-            MainContent()
+            sidebar
+            notesView
         }
         .ignoresSafeArea()
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil,
@@ -57,8 +57,7 @@ struct Home: View {
         }
     }
     
-    @ViewBuilder
-    func MainContent() -> some View {
+    var notesView: some View {
         VStack(spacing: 6) {
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass")
@@ -131,11 +130,10 @@ struct Home: View {
         .cornerRadius(18)
     }
     
-    @ViewBuilder
-    func Sidebar() -> some View {
+    var sidebar: some View {
         HStack {
             VStack {
-                ShowColorsButton()
+                showColorsButton
                     .zIndex(1)
                 
                 VStack(spacing: 15) {
@@ -155,7 +153,7 @@ struct Home: View {
                         } label: {
                             Circle()
                                 .fill(color)
-                                .frame(width: 20, height: 20)
+                                .frame(width: 30, height: 30)
                         }
                     }
                 }
@@ -164,18 +162,17 @@ struct Home: View {
                 .opacity(showColors ? 1 : 0)
                 .zIndex(0)
             }
-            .padding()
+            .frame(maxHeight: .infinity, alignment: .top)
             
             Rectangle()
                 .fill(Color.gray.opacity(0.15))
                 .frame(width: 1)
         }
         .frame(maxHeight: .infinity, alignment: .top)
-        .padding(.horizontal)
+        .padding(.trailing)
     }
     
-    @ViewBuilder
-    func ShowColorsButton() -> some View {
+    var showColorsButton: some View {
         Button {
             withAnimation(.interactiveSpring(response: 0.5,
                                             dampingFraction: 0.5,
