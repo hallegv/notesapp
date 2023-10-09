@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NoteEditorView: View {
     @Binding var noteText: String
+    @Binding var color: Color
     
     var onSubmit: (() -> ())?
     
@@ -21,11 +22,19 @@ struct NoteEditorView: View {
                 .cornerRadius(25)
                 .border(.black)
             
-            submitButton
+            HStack {
+                colorIndicator
+                submitButton
+            }
         }
         .padding()
     }
     
+    var colorIndicator: some View {
+        RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
+            .fill(color)
+            .frame(width: 100, height: 60)
+    }
     var submitButton: some View {
         Button {
             onSubmit?()
@@ -38,6 +47,6 @@ struct NoteEditorView: View {
 
 struct NoteEditorView_Previews: PreviewProvider {
     static var previews: some View {
-        NoteEditorView(noteText: .constant("Text"))
+        NoteEditorView(noteText: .constant("Text"), color: .constant(Color("Blue")))
     }
 }

@@ -38,7 +38,7 @@ struct Home: View {
         .padding(.horizontal, 22)
         .padding(.top, 35)
         .sheet(isPresented: $showNoteEditor) {
-            NoteEditorView(noteText: $noteText, onSubmit: {
+            NoteEditorView(noteText: $noteText, color: $currentColor, onSubmit: {
                 onSubmitEdit(noteAction)
                 showNoteEditor = false
             })
