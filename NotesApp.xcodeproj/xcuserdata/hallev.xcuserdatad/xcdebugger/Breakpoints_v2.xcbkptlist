@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "07D79546-060A-467C-9C62-FF2260EE99D1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBCE10AC-C2BF-4DE0-BD7B-849CF9D280F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NotesApp/View/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "onSubmitEdit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EBCE10AC-C2BF-4DE0-BD7B-849CF9D280F9 - e52f306d2d4acb17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesApp.Home.onSubmitEdit(NotesApp.NoteAction) -&gt; ()"
+                  moduleName = "NotesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hallev/Desktop/NotesApp/NotesApp/View/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1056">
+               </Location>
+               <Location
+                  uuid = "EBCE10AC-C2BF-4DE0-BD7B-849CF9D280F9 - e52f306d2d4acb17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesApp.Home.onSubmitEdit(NotesApp.NoteAction) -&gt; ()"
+                  moduleName = "NotesApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hallev/Desktop/NotesApp/NotesApp/View/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "972">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
